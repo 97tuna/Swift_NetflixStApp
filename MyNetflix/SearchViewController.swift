@@ -188,3 +188,4 @@ struct Movie: Codable {
         case previewURL = "previewUrl"
     }
 }
+

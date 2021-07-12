@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Player View Controller-->
+        <scene sceneID="R4Z-EO-ewK">
+            <objects>
+                <viewController storyboardIdentifier="PlayerViewController" id="mbs-Ed-6wm" customClass="PlayerViewController" customModule="MyNetflix" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dq2-Lt-FjU">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nqa-py-ful" customClass="PlayerView" customModule="MyNetflix" customModuleProvider="target">
+                                <rect key="frame" x="44" y="0.0" width="724" height="375"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rlf-fT-aA9">
+                                <rect key="frame" x="44" y="0.0" width="724" height="375"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QmA-fN-ukD">
+                                        <rect key="frame" x="342" y="167.66666666666666" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Y0k-og-0EA"/>
+                                            <constraint firstAttribute="width" constant="40" id="rOo-Nn-Xim"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="play.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
+                                        </state>
+                                        <state key="selected" image="pause.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="togglePlayButton:" destination="mbs-Ed-6wm" eventType="touchUpInside" id="laQ-7u-xjo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ou-2x-d7Q">
+                                        <rect key="frame" x="664" y="16" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="XGj-sX-Zsu"/>
+                                            <constraint firstAttribute="width" constant="40" id="heC-qV-Jx2"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="xmark" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closeButtonTapped:" destination="mbs-Ed-6wm" eventType="touchUpInside" id="SsY-c1-uQz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="8Ou-2x-d7Q" firstAttribute="top" secondItem="Rlf-fT-aA9" secondAttribute="top" constant="16" id="RDV-SV-i1w"/>
+                                    <constraint firstItem="QmA-fN-ukD" firstAttribute="centerX" secondItem="Rlf-fT-aA9" secondAttribute="centerX" id="byu-QO-lng"/>
+                                    <constraint firstAttribute="trailing" secondItem="8Ou-2x-d7Q" secondAttribute="trailing" constant="20" id="kv2-dY-vxB"/>
+                                    <constraint firstItem="QmA-fN-ukD" firstAttribute="centerY" secondItem="Rlf-fT-aA9" secondAttribute="centerY" id="qgG-mB-95R"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Du5-Th-wYi"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Nqa-py-ful" firstAttribute="top" secondItem="Dq2-Lt-FjU" secondAttribute="top" id="45p-xa-eoX"/>
+                            <constraint firstItem="Nqa-py-ful" firstAttribute="leading" secondItem="Du5-Th-wYi" secondAttribute="leading" id="Ok1-ek-jNT"/>
+                            <constraint firstItem="Rlf-fT-aA9" firstAttribute="leading" secondItem="Nqa-py-ful" secondAttribute="leading" id="Rcs-hW-2W9"/>
+                            <constraint firstItem="Du5-Th-wYi" firstAttribute="trailing" secondItem="Nqa-py-ful" secondAttribute="trailing" id="RsH-g1-fHN"/>
+                            <constraint firstItem="Rlf-fT-aA9" firstAttribute="width" secondItem="Nqa-py-ful" secondAttribute="width" id="ZyM-Ob-h5A"/>
+                            <constraint firstItem="Rlf-fT-aA9" firstAttribute="top" secondItem="Nqa-py-ful" secondAttribute="top" id="dlD-wU-1Ji"/>
+                            <constraint firstItem="Rlf-fT-aA9" firstAttribute="height" secondItem="Nqa-py-ful" secondAttribute="height" id="lem-XP-Xgx"/>
+                            <constraint firstItem="Nqa-py-ful" firstAttribute="bottom" secondItem="Dq2-Lt-FjU" secondAttribute="bottom" id="p2K-gh-re0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="controlView" destination="Rlf-fT-aA9" id="UpL-Kc-IXP"/>
+                        <outlet property="playButton" destination="QmA-fN-ukD" id="VaX-em-3DT"/>
+                        <outlet property="playerView" destination="Nqa-py-ful" id="gan-He-fPw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Du-VI-KnT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1.4778325123152709" y="2.3999999999999999"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pause.fill" catalog="system" width="116" height="128"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+    </resources>
+</document>
